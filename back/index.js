@@ -20,6 +20,10 @@ app.get('/students',(req, res)=> {
     res.send(students)
 })
 
+app.post ('/students',(req,res)=>{
+    res.json(students)
+})
+
 app.listen(port,()=>{
     console.log(`app running on ${port}`)
 })
