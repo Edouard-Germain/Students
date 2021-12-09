@@ -1,6 +1,9 @@
 const express = require("express")
 const app = express()
+const cors = require("cors")
+app.use(cors())
 const port = 5000
+
 
 let students = [
     {
@@ -17,10 +20,10 @@ let students = [
 ]
 
 app.get('/students',(req, res)=> {
-    res.send(students)
+    res.json(students)
 })
 
-app.post ('/students',(req,res)=>{
+app.post('/students',(req,res)=>{
     res.json(students)
 })
 
